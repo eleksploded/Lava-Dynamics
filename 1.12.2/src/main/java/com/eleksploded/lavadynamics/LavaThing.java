@@ -3,7 +3,6 @@ package com.eleksploded.lavadynamics;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
@@ -31,6 +30,29 @@ public class LavaThing {
 			CheckNSmelt(world, event.getPos().south());
 			CheckNSmelt(world, event.getPos().east());
 			CheckNSmelt(world, event.getPos().west());
+		//Maybe Lava is already placed, check for that
+		} else if(isByLava(world, event.getPos())) {
+			//CheckNSmelt if by lava
+			CheckNSmelt(world, event.getPos());
+		}
+	}
+
+	private static boolean isByLava(World world, BlockPos pos) {
+		//Relatively Self explanatory, check all sides for lava
+		if(world.getBlockState(pos.up()).getBlock() == Blocks.LAVA || world.getBlockState(pos.up()).getBlock() ==  Blocks.FLOWING_LAVA) {
+			return true;
+		} else if(world.getBlockState(pos.down()).getBlock() == Blocks.LAVA || world.getBlockState(pos.down()).getBlock() ==  Blocks.FLOWING_LAVA){
+			return true;
+		} else if(world.getBlockState(pos.north()).getBlock() == Blocks.LAVA || world.getBlockState(pos.north()).getBlock() ==  Blocks.FLOWING_LAVA) {
+			return true;
+		} else if(world.getBlockState(pos.south()).getBlock() == Blocks.LAVA || world.getBlockState(pos.south()).getBlock() ==  Blocks.FLOWING_LAVA) {
+			return true;
+		} else if(world.getBlockState(pos.east()).getBlock() == Blocks.LAVA || world.getBlockState(pos.east()).getBlock() ==  Blocks.FLOWING_LAVA) {
+			return true;
+		} else if(world.getBlockState(pos.west()).getBlock() == Blocks.LAVA || world.getBlockState(pos.west()).getBlock() ==  Blocks.FLOWING_LAVA) {
+			return true;
+		} else {
+			return false;
 		}
 	}
 
