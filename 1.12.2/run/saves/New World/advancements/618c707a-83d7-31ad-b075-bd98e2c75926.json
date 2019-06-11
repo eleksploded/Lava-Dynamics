@@ -1,0 +1,22 @@
+{
+  "minecraft:story/lava_bucket": {
+    "criteria": {
+      "lava_bucket": "2019-06-10 21:34:01 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/cauldron": {
+    "criteria": {
+      "has_water_bucket": "2019-06-10 21:34:31 -0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "taiga": "2019-06-10 21:33:38 -0700",
+      "taiga_hills": "2019-06-10 21:34:04 -0700",
+      "extreme_hills": "2019-06-10 21:34:16 -0700"
+    },
+    "done": false
+  }
+}
