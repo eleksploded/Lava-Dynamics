@@ -1,0 +1,15 @@
+package com.eleksploded.lavadynamics;
+
+import net.minecraftforge.event.world.ChunkEvent;
+import net.minecraftforge.fml.common.Mod;
+
+@Mod.EventBusSubscriber
+public class Volcano {
+	
+	
+	
+	public void OnChunkLoad(ChunkEvent.Load event) {
+		
+	}
+	
+}
