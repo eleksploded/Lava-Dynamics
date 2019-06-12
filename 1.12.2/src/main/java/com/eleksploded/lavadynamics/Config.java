@@ -5,16 +5,21 @@ import com.eleksploded.lavadynamics.proxy.CommonProxy;
 import net.minecraftforge.common.config.Configuration;
 
 public class Config {
-	//-----------Config: to be honest, not to sure how this code works, I just know it does-----------//
+	//-----------Config: to be honest, not exactly sure how this code works, I just know it does-----------//
+	
+	//Categories
 	private static final String Volcano = "Volcano Settings";
 	private static final String Debug = "Debug Settings";
 
+	//My Values
     public static int volcanoChance;
     public static int volcanoYLevel;
-    public static int timeToRise;
+    public static int craterSize;
+    public static int distanceToGenerate;
     
     public static boolean genVolcanoDebug;
     
+    //File Shtuff
     public static void readConfig() {
         Configuration cfg = CommonProxy.config;
         try {
@@ -28,11 +33,13 @@ public class Config {
             }
         }
     }
-
+    
+    //Where I get my values and set up my file
     private static void initGeneralConfig(Configuration cfg) {    	
-    	volcanoChance = cfg.getInt("volcanoChance", Volcano, 20, 0, 100, "Precent chance of volcano to spawn");
+    	volcanoChance = cfg.getInt("volcanoChance", Volcano, 5, 0, 100, "Precent chance of volcano to spawn");
     	volcanoYLevel = cfg.getInt("volcanoYLevel", Volcano, 10, 3, 255, "Approximate Y level of underground volcano lake");
-    	timeToRise = cfg.getInt("timeToRise", Volcano, 100, 50, 10000, "Amount of time (in milli seconds) between a new Lava source when growing a volcano");
+    	craterSize = cfg.getInt("craterSize", Volcano, 15, 1, 100, "Approximate size of the crater");
+    	distanceToGenerate = cfg.getInt("distanceToGenerate", Volcano, 100, 20, 100000, "How close a player needs to be to generate a volcano");
     	
     	genVolcanoDebug = cfg.getBoolean("genVolcanoDebug", Debug, false, "Debug outputs from Volcano Generation");
     }

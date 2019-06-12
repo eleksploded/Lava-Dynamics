@@ -11,6 +11,9 @@ import net.minecraft.world.storage.WorldSavedData;
 
 public class VolcanoData extends WorldSavedData {
 
+	//Good luck with this
+	
+	//----------Actual saving stuff----------//
 	private static String dataName = Reference.MODID + "_VolcanoData";
 	static World world;
 	public List<Chunk> testedChunks = new ArrayList<Chunk>();
@@ -61,6 +64,8 @@ public class VolcanoData extends WorldSavedData {
 		return compound;
 	}
 	
+	//----------Data Access----------/
+	
 	public static VolcanoData get(World worldIn) {
 		world = worldIn;
 		MapStorage storage = world.getMapStorage();
@@ -73,6 +78,7 @@ public class VolcanoData extends WorldSavedData {
 	
 	public void addTestedChunk(Chunk chunk){
 		testedChunks.add(chunk);
+		this.markDirty();
 	}
 	
 	public boolean isChunkTested(Chunk chunk) {

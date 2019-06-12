@@ -1,0 +1,9 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "savanna": "2019-06-12 12:24:27 -0700",
+      "plains": "2019-06-12 12:24:11 -0700"
+    },
+    "done": false
+  }
+}

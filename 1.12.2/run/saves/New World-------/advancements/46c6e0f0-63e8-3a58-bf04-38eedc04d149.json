@@ -1,0 +1,11 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "forest": "2019-06-12 12:35:22 -0700",
+      "plains": "2019-06-12 12:35:17 -0700",
+      "taiga": "2019-06-12 12:35:33 -0700",
+      "ocean": "2019-06-12 12:35:02 -0700"
+    },
+    "done": false
+  }
+}
