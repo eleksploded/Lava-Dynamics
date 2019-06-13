@@ -28,7 +28,6 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="net.minecraft.world.gen.feature.WorldGenerator"/>
 <fullyQualifiedTypeName name="com.eleksploded.lavadynamics.VolcanoGenerator.GenCrater"/>
-<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.world.WorldEvent"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.world.WorldEvent.Load"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.world.WorldEvent.Unload"/>
@@ -38,4 +37,5 @@
 <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
 <fullyQualifiedTypeName name="net.minecraftforge.registries.IForgeRegistry"/>
 <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 </qualifiedTypeNameHistroy>

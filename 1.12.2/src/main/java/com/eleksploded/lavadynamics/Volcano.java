@@ -161,7 +161,23 @@ public class Volcano {
 			}
 		}
 		//Remove top lava source cause it looks weird
-		world.setBlockToAir(fill.down());
+		for(int i = 1; i != 4; i++){
+			world.setBlockToAir(fill.down(i));
+		}
+		
+		BlockPos fill1 = fill.down(8);
+		
+		for(int radius = 3;radius != 0;radius--){
+			int x1 = fill1.getX();
+			int y1 = fill1.getY()-3;
+			int z1 = fill1.getZ();
+			
+			for(float i1 = 0; i1 < radius; i1 += 0.5) {
+				for(float j1 = 0; j1 < 2 * Math.PI * i1; j1 += 0.5)
+					world.setBlockState(new BlockPos((int)Math.floor(x1 + Math.sin(j1) * i1), y1 + radius, (int)Math.floor(z1 + Math.cos(j1) * i1)), Blocks.LAVA.getDefaultState());
+			}
+			fill1 = fill1.down();
+		}
 		if(debug) {
 			LavaDynamics.Logger.info("Done filling, Spawning crater");
 		}
